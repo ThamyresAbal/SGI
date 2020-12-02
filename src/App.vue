@@ -1,20 +1,17 @@
 <template>
   <div id="app">
-    <Login />
+    <Header />
+
+    <Home />
+    <router-view/>
+    
+    <FooterPage />
   </div>
 </template>
 
-<script>
-  import Login from './components/Login.vue'
-  export default {
-    name: 'App',
-    components: {
-      Login,
-    }
-  }
-</script>
+<style> 
+  @import './styles/variables.css';
 
-<style>
 * {
   margin: 0px;
   padding: 0px;
@@ -22,10 +19,25 @@
 }
 
 body, #app {
-  width: 100vw;
   height: 100vh;
-  font-family: "Open Sans";
-  text-align: center;
+  font-family: var(--default-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 </style>
+
+<script>
+  import Header from './components/Header.vue';
+  import FooterPage from './components/FooterPage.vue';
+  import Home from './components/Home.vue';
+
+  export default {
+    name: 'App',
+    components: { 
+      Header,
+      FooterPage,
+      Home
+    },
+  }
+</script>
