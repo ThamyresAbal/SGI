@@ -1,19 +1,17 @@
 <template>
-    <h3> {{ todosOsFilmes }} </h3>
+    <div>
+        <TopCarousel />
+    </div>
 </template>
 
 <script>
-    import { mapActions, mapGetters } from 'vuex';
+    import TopCarrousel from './components/TopCarousel.vue'
 
     export default {
         name: 'Home',
-        computed: mapGetters(['todosOsFilmes']),
-        methods:{ 
-            ...mapActions(['getFilmes'])
-        },
-        created() {
-            this.getFilmes();
-        },
+        components: {
+            TopCarousel
+        }
     }
 </script>
 
