@@ -1,0 +1,38 @@
+.formgroup {
+  position: relative;
+  width: 100%;
+}
+
+.formgroup__input {
+  width: 100%;
+}
+
+.formgroup__input input {
+  padding: 8px 12px;
+  border-radius: 16px;
+  font-family: var(--default-font);
+  border: none;
+  width: 100%;
+  display: block;
+}
+
+.formgroup__input input:focus {
+  outline: none;
+}
+
+.formgroup__right-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  color: #666;
+  background: none;
+  padding: 0px;
+  border: 0px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.formgroup__right-icon:focus {
+  outline: none;
+}

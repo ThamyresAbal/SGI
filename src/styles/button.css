@@ -1,0 +1,40 @@
+.button {
+  display: block;
+  text-decoration: none;
+  font-family: var(--default-font);
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.button--primary {
+  padding: 6px;
+  border: none;
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: bold;
+  width: 130px;
+}
+
+.button--secondary {
+  padding: 6px;
+  border: none;
+  background: #dff9fb;
+  border: 1px solid #22a6b3;
+  border-radius: 16px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 130px;
+}
+
+.button--primay:focus {
+  outline: none;
+  border: 1px solid rgb(238, 255, 0);
+}
+
+.button--secondary:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
