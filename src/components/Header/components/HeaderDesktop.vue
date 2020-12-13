@@ -2,9 +2,9 @@
   <nav class="navbar">
     <ul class="navbar__list">
       <li class="navbar__item navbar__item--larger">
-        <a class="navbar__item__link" href="#">
+        <router-link tag="a" class="navbar__item__link" to="/">
           Logo
-        </a>
+        </router-link>
       </li>
 
       <li class="navbar__item">
@@ -36,15 +36,15 @@
       </li>
 
       <li class="navbar__item">
-        <a class="navbar__item__link" href="#">
+        <router-link class="navbar__item__link" to="Login">
           Login
-        </a>
+        </router-link>
       </li>
 
       <li class="navbar__item navbar__item--larger">
-        <a class="navbar__item__link" href="#">
+        <router-link class="navbar__item__link" to="/cadastro">
           Registrar
-        </a>
+        </router-link>
       </li>
     </ul>
 
@@ -56,21 +56,21 @@
     >
       <div class="navbar__list">
         <li class="navbar__item">
-          <a class="navbar__item__link" href="#">
-            Item 1
-          </a>
+          <router-link tag="a" class="navbar__item__link" to="filmeDetalhe">
+            Cinema
+          </router-link>
         </li>
 
         <li class="navbar__item">
-          <a class="navbar__item__link" href="#">
-            Item 2
-          </a>
+          <router-link tag="a" class="navbar__item__link" to="teatroDetalhe">
+            Teatro
+          </router-link>
         </li>
 
         <li class="navbar__item">
-          <a class="navbar__item__link" href="#">
-            Item 3
-          </a>
+          <router-link tag="a" class="navbar__item__link" to="showDetalhe">
+            Shows
+          </router-link>
         </li>
       </div>
     </div>

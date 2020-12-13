@@ -1,48 +1,68 @@
 <template>
-  <div class="home-page-container">
+  <div class="login-page-container">
     <div class="image-area">
       <img src="../assets/images/login-illustration.jpg" />
     </div>
 
     <div class="form-area">
       <form class="form">
-          
+        <img
+          class="user-photo"
+          src="../assets/images/user-no-image.png"
+          alt="Usuário"
+        >
+
         <div class="form-field">
           <div class="form-field__label">
-            <label for="email">
+            <label for="login-user">
               E-mail
             </label>
           </div>
 
           <div class="form-field__input">
             <input
+              autocomplete="username"
               type="email"
-              id="email"
-              placeholder="Digite o seu E-mail"
+              id="login-user"
+              placeholder="Digite o seu e-mail"
             />
           </div>
         </div>
 
         <div class="form-field">
           <div class="form-field__label">
-            <label for="login-user">
+            <label for="password">
               Senha
             </label>
           </div>
 
           <div class="form-field__input">
             <input
+              autocomplete="new-password"
               type="password"
-              id="senha"
+              id="password"
               placeholder="Digite a sua senha"
             />
+          </div>
+          
+          <div class="form__links">
+            <router-link to="/cadastro">
+              Novo por aqui? Cadastre-se
+            </router-link>
+
+            <router-link to="/login">
+              Esqueceu a seu senha? Clique aqui
+            </router-link>
           </div>
         </div>
 
         <div class="form-button">
-          <button>
-            Logar
-          </button>
+          <router-link
+            to="/catalogs"
+            class="button button--primary"
+          >
+            Entrar
+          </router-link>
         </div>
       </form>
     </div>
@@ -50,14 +70,13 @@
 </template>
 
 <script>
-
-export default {
-  name: 'Cadastro',
-}
+  export default {
+    name: 'Login',
+  }
 </script>
 
 <style scoped>
-  .home-page-container {
+  .login-page-container {
     height: 100%;
     width: 100%;
     display: flex;
@@ -67,7 +86,7 @@ export default {
 
   .image-area, .form-area {
     height: 70%;
-    width: 40%;
+    width: 490px;
   }
 
   .image-area img {
@@ -96,7 +115,7 @@ export default {
   }
 
   .form-area {
-    background: #a00;
+    background: var(--primary-color);
   }
 
   .form {
@@ -112,8 +131,11 @@ export default {
   }
 
   .form-field__label label {
+    font-family: var(--monospace-font);
     color: #fff;
     margin-bottom: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
     display: block;
     text-align: left;
     width: max-content;
@@ -121,10 +143,12 @@ export default {
   }
 
   .form-field__input input {
+    font-family: var(--default-font);
+    font-size: 14px;
     width: 100%;
-    padding: 12px;
+    padding: 8px;
     border-radius: 4px;
-    border: none;
+    border: 1px solid white;
   }
 
   .form-field__input input:focus {
@@ -132,19 +156,37 @@ export default {
     border: 1px solid rgb(238, 255, 0);
   }
 
-  .form-button button {
-    padding: 12px;
-    border: none;
-    background: #fff;
-    color: #a00;
-    font-weight: bold;
-    width: 130px;
-    font-size: 14px;
+  .form-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .user-photo {
+    max-width: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  .form__links {
+    margin-top: 24px;
+  }
+
+  .form__links a {
+    margin: 0px auto 8px auto;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    width: max-content;
+    font-size: 13px;
+    text-align: center;
     cursor: pointer;
   }
 
-  .form-button button:focus {
-    outline: none;
-    border: 1px solid rgb(238, 255, 0);
+  .form__links a:last-child {
+    margin-bottom: 0px;
+  }
+
+  .form__links a:hover {
+    text-decoration: underline;
   }
 </style>

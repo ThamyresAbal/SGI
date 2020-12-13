@@ -7,7 +7,6 @@
     <div class="form-area">
       <form class="form">
         <div class="form-field">
-            
           <div class="form-field__label">
             <label for="login-user">
               Nome
@@ -16,6 +15,7 @@
 
           <div class="form-field__input">
             <input
+              autocomplete="username"
               type="text"
               id="login-user"
               placeholder="Digite o seu nome"
@@ -48,6 +48,7 @@
 
           <div class="form-field__input">
             <input
+              autocomplete="email"
               type="email"
               id="email"
               placeholder="Digite o seu E-mail"
@@ -57,19 +58,26 @@
 
         <div class="form-field">
           <div class="form-field__label">
-            <label for="login-user">
+            <label for="password">
               Senha
             </label>
           </div>
 
           <div class="form-field__input">
             <input
+              autocomplete="new-password"
               type="password"
-              id="login-user"
+              id="password"
               placeholder="Digite a sua senha"
             />
           </div>
         </div>
+
+          <div class="form__links">
+            <router-link to="/login">
+              Voltar para o login
+            </router-link>
+          </div>
 
         <div class="form-button">
           <button>
@@ -82,9 +90,14 @@
 </template>
 
 <script>
-
 export default {
-  name: 'Login',
+  name: 'Home',
+  components: {
+
+  },
+  methods: {
+
+  },
 }
 </script>
 
@@ -99,7 +112,7 @@ export default {
 
   .image-area, .form-area {
     height: 70%;
-    width: 40%;
+    width: 490px;
   }
 
   .image-area img {
@@ -128,7 +141,7 @@ export default {
   }
 
   .form-area {
-    background: #a00;
+    background: var(--primary-color);
   }
 
   .form {
@@ -144,8 +157,11 @@ export default {
   }
 
   .form-field__label label {
+    font-family: var(--monospace-font);
     color: #fff;
     margin-bottom: 4px;
+    font-size: 13px;
+    text-transform: uppercase;
     display: block;
     text-align: left;
     width: max-content;
@@ -153,10 +169,12 @@ export default {
   }
 
   .form-field__input input {
+    font-family: var(--default-font);
+    font-size: 14px;
     width: 100%;
-    padding: 12px;
+    padding: 8px;
     border-radius: 4px;
-    border: none;
+    border: 1px solid white;
   }
 
   .form-field__input input:focus {
@@ -164,19 +182,42 @@ export default {
     border: 1px solid rgb(238, 255, 0);
   }
 
+  .form-button {
+    display: flex;
+    justify-content: center;
+  }
+  
   .form-button button {
-    padding: 12px;
+    font-family: var(--default-font);
+    padding: 6px;
     border: none;
     background: #fff;
-    color: #a00;
+    color: var(--primary-color);
     font-weight: bold;
     width: 130px;
     font-size: 14px;
     cursor: pointer;
+    border: 1px solid #fff;
   }
 
   .form-button button:focus {
     outline: none;
     border: 1px solid rgb(238, 255, 0);
+  }
+
+  .form__links a {
+    margin: 0px auto;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    width: max-content;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+
+  .form__links a:hover {
+    text-decoration: underline;
   }
 </style>

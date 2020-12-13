@@ -1,26 +1,58 @@
-import VueRouter from 'vue-router';
-import Login from './components/Login';
-import Cadastro from './components/Cadastro';
-import Home from './components/Home';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Cadastro from './components/Cadastro.vue'
+import Login from './components/Login.vue';
+import Catalogs from './components/Catalogs/Catalogs.vue';
+import Pagamento from './components/Pagamento.vue';
+import FilmeDetalhe from './components/FilmeDetalhe';
+import TeatroDetalhe from './components/TeatroDetalhe';
+import ShowDetalhe from './components/ShowDetalhe';
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'Catalogs',
+    component: Catalogs,
+  },
+  {
+    path: '/cadastro',
+    name: 'Cadastro',
+    component: Cadastro
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/pagamento',
+    name: 'Pagamento',
+    component: Pagamento,
+  },
+  {
+    path: '/filmeDetalhe',
+    name: 'FilmeDetalhe',
+    component: FilmeDetalhe,
+  },
+  {
+    path: '/teatroDetalhe',
+    name: 'teatroDetalhe',
+    component: TeatroDetalhe,
+  },
+  {
+    path: '/showDetalhe',
+    name: 'showDetalhe',
+    component: ShowDetalhe,
+  },
+  {
+    path: '*',
+    redirect: '/catalogs',
+  }
+]
 
 export default new VueRouter({
-    mode: 'history',
-    routes : [
-        {
-            path: '/',
-            name: 'home',
-            component: Home
-        },
-        {
-            path: '/login',
-            name: 'login',
-            component: Login
-        },
-        {
-            path: '/cadastro',
-            name: 'cadastro',
-            component: Cadastro
-        },
-
-    ]
-});
+  mode: 'history',
+  routes: routes,
+})

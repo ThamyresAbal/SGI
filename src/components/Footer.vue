@@ -126,7 +126,7 @@
     </div>
 
     <div class="footer-container__col">
-      <a class="footer__button" href="#nao-esquece-de-colocar-o-link-do-github-aqui-chaveirinhoo">
+      <a href="#" class="footer__button">
         Botão
       </a>
     </div>

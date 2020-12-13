@@ -4,7 +4,7 @@
 
     <router-view/>
 
-    <FooterPage />
+    <Footer />
   </div>
 </template>
 
@@ -34,14 +34,14 @@ body, #app {
 </style>
 
 <script>
-import Header from './components/Header/Header';
-import FooterPage from './components/FooterPage';
-
-export default {
-  name: 'App',
-  components: { 
-    Header,
-    FooterPage,
-  },
-}
+  import Header from './components/Header/Header.vue';
+  import Footer from './components/Footer.vue';
+  
+  export default {
+    name: 'App',
+    components: { 
+      Header,
+      Footer,
+    },
+  }
 </script>

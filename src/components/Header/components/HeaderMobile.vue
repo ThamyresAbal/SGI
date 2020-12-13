@@ -47,9 +47,19 @@
             </button>
 
             <div class="collapse">
-              <a class="navigation__item__link">Item 1</a>
-              <a class="navigation__item__link">Item 2</a>
-              <a class="navigation__item__link">Item 3</a>
+              <div class="collase__content">
+                <router-link to="/filmeDetalhe" class="navigation__item__link">
+                  Cinema
+                </router-link>
+
+                <router-link to="/teatroDetalhe" class="navigation__item__link">
+                  Teatro
+                </router-link>
+
+                <router-link to="/showDetalhe" class="navigation__item__link">
+                  Shows
+                </router-link>
+              </div>
             </div>
           </li>
 
@@ -66,9 +76,9 @@
           </li>
 
           <li class="navigation__item">
-            <a class="navigation__item__link" href="#">
+            <router-link class="navigation__item__link" to="Login">
               Login
-            </a>
+            </router-link>
           </li>
 
           <li class="navigation__item navigation__item--larger">
@@ -163,6 +173,7 @@
 
   .navigation__item {
     margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .navigation__item:last-child {
@@ -173,12 +184,11 @@
     display: block;
     background: none;
     border: none;
-    text-align: right;
+    text-align: left;
     color: #fff;
     font-weight: bold;
-    font-size: 14px;
-    margin-left: auto;
-    padding: 8px;
+    font-size: 13px;
+    padding: 12px;
     text-decoration: none;
   }
 
@@ -201,8 +211,20 @@
     transition: height 0.2s ease-in;
   }
 
+  .collase__content {
+    padding-left: 16px;
+  }
+
+  .collase__content .navigation__item__link {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .collase__content .navigation__item__link:last-child {
+    border-bottom: none;
+  }
+
   .navigation__item--open .collapse {
-    height: 95px;
+    height: 135px;
   }
 </style>
 

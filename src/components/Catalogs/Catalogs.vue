@@ -9,32 +9,28 @@
         title="Cinema"
         :images="[
           'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
+          'https://picsum.photos/id/10/500/300',
+          'https://picsum.photos/id/237/500/300',
+          'https://picsum.photos/seed/picsum/500/300',
         ]"
       />
 
       <Catalog
         title="Teatro"
         :images="[
+          'https://picsum.photos/id/237/500/300',
           'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
+          'https://picsum.photos/seed/picsum/500/300',
+          'https://picsum.photos/id/10/500/300',
         ]"
       />
 
       <Catalog
         title="Shows"
         :images="[
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
-          'https://picsum.photos/500/300',
+          'https://picsum.photos/id/10/500/300',
+          'https://picsum.photos/id/237/500/300',
+          'https://picsum.photos/seed/picsum/500/300',
           'https://picsum.photos/500/300',
         ]"
       />
@@ -43,8 +39,8 @@
 </template>
 
 <script>
-import TopCarousel from '../../components/TopCarousel/TopCarousel';
-import Catalog from './components/Catalog';
+import TopCarousel from '../../components/TopCarousel.vue';
+import Catalog from './components/Catalog.vue';
 
 export default {
   name: 'Catalogs',

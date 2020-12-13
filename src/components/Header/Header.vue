@@ -29,14 +29,14 @@
 </style>
 
 <script>
-  import HeaderDesktop from './components/HeaderDesktop';
-  import HeaderMobile from './components/HeaderMobile';
+import HeaderDesktop from './components/HeaderDesktop';
+import HeaderMobile from './components/HeaderMobile';
 
-  export default {
-    name: 'Header',
-    components: {
-      HeaderDesktop,
-      HeaderMobile,
-    }
+export default {
+  name: 'Header',
+  components: {
+    HeaderDesktop,
+    HeaderMobile,
   }
+}
 </script>

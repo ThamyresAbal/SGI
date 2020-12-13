@@ -5,21 +5,21 @@
         <swiper-slide>
           <img
             class="carousel__item"
-            src="https://picsum.photos/1600/400"
+            src="../assets/images/cinema.jpg"
           />
         </swiper-slide>
 
         <swiper-slide>
           <img
             class="carousel__item"
-            src="https://picsum.photos/1600/400"
+            src="../assets/images/ticket.jpg"
           />
         </swiper-slide>
 
         <swiper-slide>
           <img
             class="carousel__item"
-            src="https://picsum.photos/1600/400"
+            src="../assets/images/movie.jpg"
           />
         </swiper-slide>
 
