@@ -36,7 +36,7 @@
       </li>
 
       <li class="navbar__item">
-        <router-link class="navbar__item__link" to="Login">
+        <router-link class="navbar__item__link" to="/login">
           Login
         </router-link>
       </li>
@@ -56,19 +56,19 @@
     >
       <div class="navbar__list">
         <li class="navbar__item">
-          <router-link tag="a" class="navbar__item__link" to="filmeDetalhe">
+          <router-link tag="a" class="navbar__item__link" to="/filmeDetalhe">
             Cinema
           </router-link>
         </li>
 
         <li class="navbar__item">
-          <router-link tag="a" class="navbar__item__link" to="teatroDetalhe">
+          <router-link tag="a" class="navbar__item__link" to="/teatroDetalhe">
             Teatro
           </router-link>
         </li>
 
         <li class="navbar__item">
-          <router-link tag="a" class="navbar__item__link" to="showDetalhe">
+          <router-link tag="a" class="navbar__item__link" to="/showDetalhe">
             Shows
           </router-link>
         </li>

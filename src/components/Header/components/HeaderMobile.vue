@@ -26,7 +26,7 @@
 
         <ul class="navigation__list">
           <li class="navigation__item navbar__item--larger">
-            <a class="navigation__item__link" href="#">
+            <a class="navigation__item__link" to="/">
               Logo
             </a>
           </li>
@@ -76,15 +76,15 @@
           </li>
 
           <li class="navigation__item">
-            <router-link class="navigation__item__link" to="Login">
+            <router-link class="navigation__item__link" to="/login">
               Login
             </router-link>
           </li>
 
           <li class="navigation__item navigation__item--larger">
-            <a class="navigation__item__link" href="#">
+            <router-link tag="a" class="navigation__item__link" to="/cadastro">
               Registrar
-            </a>
+            </router-link>
           </li>
         </ul>
       </nav>

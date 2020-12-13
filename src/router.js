@@ -38,12 +38,12 @@ const routes = [
   },
   {
     path: '/teatroDetalhe',
-    name: 'teatroDetalhe',
+    name: 'TeatroDetalhe',
     component: TeatroDetalhe,
   },
   {
     path: '/showDetalhe',
-    name: 'showDetalhe',
+    name: 'ShowDetalhe',
     component: ShowDetalhe,
   },
   {
