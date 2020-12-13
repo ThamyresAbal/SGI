@@ -126,8 +126,8 @@
     </div>
 
     <div class="footer-container__col">
-      <a href="#" class="footer__button">
-        Botão
+      <a href="https://github.com/ThamyresAbal/SGI"  class="footer__button">
+        Github
       </a>
     </div>
   </footer>
